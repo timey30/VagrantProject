@@ -111,10 +111,10 @@ public class ratcontrols : MonoBehaviour
                 Attack();
                 FindObjectOfType<AudioManager>().Play("Rat");
             }
-            else
-            {
-                anim.SetBool("isFollowing", true);
-            }
+           // else
+          //  {
+          //      anim.SetBool("isFollowing", true);
+          //  }
 
         }
         else

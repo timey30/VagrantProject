@@ -185,7 +185,7 @@ public class SpitRatcontrols : MonoBehaviour
     public void TakeDamage(int damage)
     {
 
-      //  anim.SetTrigger("isHit");
+        anim.SetTrigger("Hit");
         currentHealthbar -= 10.1333333333f;
         healthbar.GetComponent<EnemyHealthBar>().SetSize(currentHealthbar);
         dazedTime = startDazedTime;
@@ -194,9 +194,12 @@ public class SpitRatcontrols : MonoBehaviour
         Debug.Log("Damage Taken");
         if (currentHealth <= 0)
         {
+           // anim.SetBool("isFollowing", false);
             healthbar.GetComponent<EnemyHealthBar>().DestroyHealthbar();
             dazedTime = 15f;
-            Destroy(gameObject);
+            anim.SetBool("Dead", true);
+            
+            
 
 
         }
